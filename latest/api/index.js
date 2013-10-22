@@ -1,0 +1,1 @@
+Index.PACKAGES = {"de" : [], "de.sciss" : [], "de.sciss.file" : [{"object" : "de\/sciss\/file\/File$.html", "name" : "de.sciss.file.File"}, {"class" : "de\/sciss\/file\/package$$RichFile.html", "name" : "de.sciss.file.RichFile"}]};
