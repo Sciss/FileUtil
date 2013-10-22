@@ -1,6 +1,6 @@
 package de.sciss
 
-import collection.immutable.{IndexedSeq => IIdxSeq}
+import collection.immutable.{IndexedSeq => Vec}
 import java.io.FileFilter
 import language.implicitConversions
 
@@ -14,13 +14,15 @@ package object file {
   }
 
   implicit final class RichFile(val peer: File) extends AnyVal {
-    def /(child: String): File   = new File(peer, child)
-    def parent          : File   = {
+    def / (child: String): File   = new File(peer, child)
+    def parent: File = {
       val res = peer.getParentFile
       if (res == null) sys.error(s"File $peer does not have a parent")
       res
     }
     def parentOption: Option[File] = Option(peer.getParentFile)
+
+    def absolute: File = new File(peer.toURI.normalize).getAbsoluteFile
 
     def path        : String    = peer.getPath
     def absolutePath: String    = peer.getAbsolutePath
@@ -30,9 +32,10 @@ package object file {
     def ext : String  = baseAndExt._2
 
     def replaceExt(s: String): File = {
-      val n     = base
+      val b     = base
       val ext   = if (s.charAt(0) == '.') s else "." + s
-      peer.parent / (n + ext)
+      val name  = b + ext
+      peer.parentOption.fold(file(name))(_ / name)
     }
 
     /** Returns a tuple consisting of the file's name (without extension), and the extension (period dropped). */
@@ -42,8 +45,8 @@ package object file {
       if (i < 0) (n, "") else (n.substring(0, i), n.substring(i + 1))
     }
 
-    def children: IIdxSeq[File] = children(_ => true)
-    def children(filter: File => Boolean): IIdxSeq[File] = {
+    def children: Vec[File] = children(_ => true)
+    def children(filter: File => Boolean): Vec[File] = {
       val arr = peer.listFiles(filter)
       if (arr == null) Vector.empty else arr.toIndexedSeq
     }
