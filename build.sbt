@@ -56,3 +56,14 @@ seq(lsSettings :_*)
 (LsKeys.ghUser in LsKeys.lsync) := Some("Sciss")
 
 (LsKeys.ghRepo in LsKeys.lsync) := Some(name.value)
+
+// ---- ghpages ----
+
+site.settings
+
+ghpages.settings
+
+git.remoteRepo := "git@github.com:Sciss/" + name.value + ".git"
+
+site.includeScaladoc()
+

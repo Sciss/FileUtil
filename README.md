@@ -16,7 +16,9 @@ To use the library in your project:
 
 The current version `v` is `"1.1.+"`
 
-## overview
+## documentation
+
+### overview
 
 Typically you will import the contents of package `de.sciss.file`. This includes a type alias `File` for `java.io.File`, a simple constructor `file("path")`, and enrichtments for `File`, which allow for example to construct files in the manner `file("base") / "sub" / "sub"`.
 
@@ -33,3 +35,7 @@ Typically you will import the contents of package `de.sciss.file`. This includes
 ```
 
 The regular Java methods on files are still available, such as `.lastModified`, `.isFile`, `.isHidden`, `.length` etc.
+
+### API docs
+
+The API docs can be generated via `sbt doc`. The latest docs [can be browsed online here](http://sciss.github.io/FileUtil/latest/api/).
