@@ -21,14 +21,15 @@ The current version `v` is `"1.1.+"`
 Typically you will import the contents of package `de.sciss.file`. This includes a type alias `File` for `java.io.File`, a simple constructor `file("path")`, and enrichtments for `File`, which allow for example to construct files in the manner `file("base") / "sub" / "sub"`.
 
 ```scala
-    import de.sciss.file._                  // import type alias File for java.io.File, and enrichments
+    import de.sciss.file._              // import type alias File for java.io.File, and enrichments
 
-    (userHome / "Desktop").isDirectory      // userHome is a predefined file, slash operator creates sub-files
-    file(".").absolute                      // file(<string>) method creates file
+    (userHome / "Desktop").isDirectory  // userHome is predefined, slash operator creates sub-files
+    file(".").absolute                  // file(<string>) method creates file
     val x = file("foo/bar.baz")
-    val (base, ext) = x.baseAndExt          // split name and extension
-    x.replaceExt("pdf")                     // -> foo/bar.pdf
-    val tmp = File.createTemp()             // temporary file (by default deleted upon exit)
+    val (base, ext) = x.baseAndExt      // split name and extension
+    x.replaceExt("pdf")                 // -> foo/bar.pdf
+    val tmp = File.createTemp()         // temporary file (by default deleted upon exit)
+    userHome.children(_.length > 4096)  // list files in directory, using filter predicate
 ```
 
 The regular Java methods on files are still available, such as `.lastModified`, `.isFile`, `.isHidden`, `.length` etc.
