@@ -1,10 +1,12 @@
 name          := "FileUtil"
 
-version       := "1.1.0"
+version       := "1.1.1-SNAPSHOT"
 
 organization  := "de.sciss"
 
-scalaVersion  := "2.10.3"
+scalaVersion  := "2.11.0-RC3"
+
+crossScalaVersions := Seq("2.11.0-RC3", "2.10.4")
 
 description   := "Simple Scala enrichtments for java.io.File"
 
@@ -14,7 +16,7 @@ licenses      := Seq("LGPL v2.1+" -> url("http://www.gnu.org/licenses/lgpl-2.1.t
 
 initialCommands in console := """import de.sciss.file._"""
 
-retrieveManaged := true
+// retrieveManaged := true
 
 scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature")
 
