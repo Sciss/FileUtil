@@ -8,13 +8,13 @@ It is (C)opyright 2013 by Hanns Holger Rutz. All rights reserved. FileUtil is re
 
 ## requirements / installation
 
-This project compiles against Scala 2.10 using sbt 0.13.
+This project compiles against Scala 2.11, 2.10 using sbt 0.13.
 
 To use the library in your project:
 
     "de.sciss" %% "fileutil" % v
 
-The current version `v` is `"1.1.+"`
+The current version `v` is `"1.1.1+"`
 
 ## documentation
 

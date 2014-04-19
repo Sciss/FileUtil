@@ -1,24 +1,24 @@
-name          := "FileUtil"
+name               := "FileUtil"
 
-version       := "1.1.1-SNAPSHOT"
+version            := "1.1.1"
 
-organization  := "de.sciss"
+organization       := "de.sciss"
 
-scalaVersion  := "2.11.0-RC3"
+scalaVersion       := "2.11.0"
 
-crossScalaVersions := Seq("2.11.0-RC3", "2.10.4")
+crossScalaVersions := Seq("2.11.0", "2.10.4")
 
-description   := "Simple Scala enrichtments for java.io.File"
+description        := "Simple Scala enrichtments for java.io.File"
 
-homepage      := Some(url("https://github.com/Sciss/" + name.value))
+homepage           := Some(url("https://github.com/Sciss/" + name.value))
 
-licenses      := Seq("LGPL v2.1+" -> url("http://www.gnu.org/licenses/lgpl-2.1.txt"))
+licenses           := Seq("LGPL v2.1+" -> url("http://www.gnu.org/licenses/lgpl-2.1.txt"))
 
 initialCommands in console := """import de.sciss.file._"""
 
 // retrieveManaged := true
 
-scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature")
+scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-Xfuture")
 
 // ---- publishing ----
 
