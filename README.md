@@ -1,5 +1,8 @@
 # FileUtil
 
+[![Flattr this](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=sciss&url=https%3A%2F%2Fgithub.com%2FSciss%2FFileUtil&title=FileUtil&language=Scala&tags=github&category=software)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.sciss/fileutil_2.11/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.sciss/fileutil_2.11)
+
 ## statement
 
 FileUtil is a small library for Scala to provide enrichment and utility methods for `java.io.File`. Where possible and useful, it tries to use the same method names as sbt, e.g. `base` and `ext` to obtain base file name and extension.
