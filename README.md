@@ -1,13 +1,14 @@
 # FileUtil
 
 [![Flattr this](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=sciss&url=https%3A%2F%2Fgithub.com%2FSciss%2FFileUtil&title=FileUtil&language=Scala&tags=github&category=software)
+[![Build Status](https://travis-ci.org/Sciss/FileUtil.svg?branch=master)](https://travis-ci.org/Sciss/FileUtil)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.sciss/fileutil_2.11/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.sciss/fileutil_2.11)
 
 ## statement
 
 FileUtil is a small library for Scala to provide enrichment and utility methods for `java.io.File`. Where possible and useful, it tries to use the same method names as sbt, e.g. `base` and `ext` to obtain base file name and extension.
 
-It is (C)opyright 2013 by Hanns Holger Rutz. All rights reserved. FileUtil is released under the [GNU Lesser General Public License](https://raw.github.com/Sciss/FileUtil/master/LICENSE) v2.1+ and comes with absolutely no warranties. To contact the author, send an email to `contact at sciss.de`.
+It is (C)opyright 2013&ndash;2016 by Hanns Holger Rutz. All rights reserved. FileUtil is released under the [GNU Lesser General Public License](https://raw.github.com/Sciss/FileUtil/master/LICENSE) v2.1+ and comes with absolutely no warranties. To contact the author, send an email to `contact at sciss.de`.
 
 ## requirements / installation
 
@@ -17,7 +18,11 @@ To use the library in your project:
 
     "de.sciss" %% "fileutil" % v
 
-The current version `v` is `"1.1.1+"`
+The current version `v` is `"1.1.1"`
+
+## contributing
+
+Please see the file [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## documentation
 
