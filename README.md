@@ -12,13 +12,13 @@ It is (C)opyright 2013&ndash;2016 by Hanns Holger Rutz. All rights reserved. Fil
 
 ## requirements / installation
 
-This project compiles against Scala 2.11, 2.10 using sbt 0.13.
+This project compiles against Scala 2.12.0-RC1, 2.11, 2.10 using sbt 0.13.
 
 To use the library in your project:
 
     "de.sciss" %% "fileutil" % v
 
-The current version `v` is `"1.1.1"`
+The current version `v` is `"1.1.2"`
 
 ## contributing
 

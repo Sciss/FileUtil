@@ -1,8 +1,8 @@
 name               := "FileUtil"
-version            := "1.1.2-SNAPSHOT"
+version            := "1.1.2"
 organization       := "de.sciss"
 scalaVersion       := "2.11.8"
-crossScalaVersions := Seq("2.11.8", "2.10.6")
+crossScalaVersions := Seq("2.12.0-RC1", "2.11.8", "2.10.6")
 description        := "Simple Scala enrichtments for java.io.File"
 homepage           := Some(url(s"https://github.com/Sciss/${name.value}"))
 licenses           := Seq("LGPL v2.1+" -> url("http://www.gnu.org/licenses/lgpl-2.1.txt"))
