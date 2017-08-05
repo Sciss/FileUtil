@@ -1,15 +1,22 @@
-name               := "FileUtil"
+lazy val baseName       = "FileUtil"
+lazy val baseNameL      = baseName.toLowerCase
+lazy val projectVersion = "1.1.3"
+lazy val mimaVersion    = "1.1.2"
+
+name               := baseName
 version            := "1.1.2"
 organization       := "de.sciss"
-scalaVersion       := "2.11.8"
-crossScalaVersions := Seq("2.12.0-RC1", "2.11.8", "2.10.6")
+scalaVersion       := "2.12.3"
+crossScalaVersions := Seq("2.12.3", "2.11.11", "2.10.6")
 description        := "Simple Scala enrichtments for java.io.File"
 homepage           := Some(url(s"https://github.com/Sciss/${name.value}"))
 licenses           := Seq("LGPL v2.1+" -> url("http://www.gnu.org/licenses/lgpl-2.1.txt"))
 
 initialCommands in console := """import de.sciss.file._"""
 
-scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-Xfuture")
+scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-Xfuture", "-Xlint")
+
+mimaPreviousArtifacts := Set("de.sciss" %% baseNameL % mimaVersion)
 
 // ---- publishing ----
 
@@ -42,11 +49,7 @@ pomExtra := { val n = name.value
 
 // ---- ghpages ----
 
-site.settings
-
-ghpages.settings
+enablePlugins(GhpagesPlugin)
+enablePlugins(SiteScaladocPlugin)
 
 git.remoteRepo := s"git@github.com:Sciss/${name.value}.git"
-
-site.includeScaladoc()
-
