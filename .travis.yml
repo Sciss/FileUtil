@@ -15,5 +15,5 @@ before_script:
 matrix:
   # scala 2.12 requires java 8
   exclude:
-    - scala: 2.12.2
+    - scala: 2.12.3
       env: JDK=openjdk6
