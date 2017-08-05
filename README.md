@@ -42,9 +42,11 @@ Typically you will import the contents of package `de.sciss.file`. This includes
     userHome.children(_.length > 4096)  // list files in directory, using filter predicate
 ```
 
+Further methods on files such as `relativize` are available, as well as utility methods and object in the companion object,
+such as `NameOrdering`. See the API docs for a full overview.
 The regular Java methods on files are still available, such as `.lastModified`, `.isFile`, `.isHidden`, `.length` etc.
 
 ### API docs
 
-The API docs can be generated via `sbt doc`. The latest docs [can be browsed online here](http://sciss.github.io/FileUtil/latest/api/).
+The API docs can be generated via `sbt doc`. The latest docs [can be browsed online here](http://sciss.github.io/FileUtil/latest/api/de/sciss/file/index.html).
 I publish them via `sbt ghpages-push-site`.

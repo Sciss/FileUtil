@@ -4,7 +4,7 @@ lazy val projectVersion = "1.1.3"
 lazy val mimaVersion    = "1.1.2"
 
 name               := baseName
-version            := "1.1.2"
+version            := projectVersion
 organization       := "de.sciss"
 scalaVersion       := "2.12.3"
 crossScalaVersions := Seq("2.12.3", "2.11.11", "2.10.6")
