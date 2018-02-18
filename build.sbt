@@ -6,8 +6,8 @@ lazy val mimaVersion    = "1.1.2"
 name               := baseName
 version            := projectVersion
 organization       := "de.sciss"
-scalaVersion       := "2.12.3"
-crossScalaVersions := Seq("2.12.3", "2.11.11", "2.10.6")
+scalaVersion       := "2.13.0-M3"
+crossScalaVersions := Seq("2.12.4", "2.11.12")
 description        := "Simple Scala enrichtments for java.io.File"
 homepage           := Some(url(s"https://github.com/Sciss/${name.value}"))
 licenses           := Seq("LGPL v2.1+" -> url("http://www.gnu.org/licenses/lgpl-2.1.txt"))
@@ -34,10 +34,6 @@ publishArtifact in Test := false
 pomIncludeRepository := { _ => false }
 
 pomExtra := { val n = name.value
-<scm>
-  <url>git@github.com:Sciss/{n}.git</url>
-  <connection>scm:git:git@github.com:Sciss/{n}.git</connection>
-</scm>
 <developers>
   <developer>
     <id>sciss</id>
