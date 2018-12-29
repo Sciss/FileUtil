@@ -9,7 +9,7 @@ organization       := "de.sciss"
 scalaVersion       := "2.12.3"
 crossScalaVersions := Seq("2.12.3", "2.11.11", "2.10.6")
 description        := "Simple Scala enrichtments for java.io.File"
-homepage           := Some(url(s"https://github.com/Sciss/${name.value}"))
+homepage           := Some(url(s"https://git.iem.at/sciss/${name.value}"))
 licenses           := Seq("LGPL v2.1+" -> url("http://www.gnu.org/licenses/lgpl-2.1.txt"))
 
 initialCommands in console := """import de.sciss.file._"""
@@ -35,8 +35,8 @@ pomIncludeRepository := { _ => false }
 
 pomExtra := { val n = name.value
 <scm>
-  <url>git@github.com:Sciss/{n}.git</url>
-  <connection>scm:git:git@github.com:Sciss/{n}.git</connection>
+  <url>git@git.iem.at:sciss/{n}.git</url>
+  <connection>scm:git:git@git.iem.at:sciss/{n}.git</connection>
 </scm>
 <developers>
   <developer>
@@ -49,7 +49,9 @@ pomExtra := { val n = name.value
 
 // ---- ghpages ----
 
-enablePlugins(GhpagesPlugin)
-enablePlugins(SiteScaladocPlugin)
+// NOTE: this produce duplicate <scm> entries in the POM and thus causes trouble with sonatype
+// enablePlugins(GhpagesPlugin)
+// enablePlugins(SiteScaladocPlugin)
+// 
+// git.remoteRepo := s"git@github.com:Sciss/${name.value}.git"
 
-git.remoteRepo := s"git@github.com:Sciss/${name.value}.git"
