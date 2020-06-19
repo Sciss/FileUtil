@@ -1,23 +1,23 @@
 # FileUtil
 
 [![Build Status](https://travis-ci.org/Sciss/FileUtil.svg?branch=main)](https://travis-ci.org/Sciss/FileUtil)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.sciss/fileutil_2.11/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.sciss/fileutil_2.11)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.sciss/fileutil_2.13/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.sciss/fileutil_2.13)
 
 ## statement
 
 FileUtil is a small library for Scala to provide enrichment and utility methods for `java.io.File`. Where possible and useful, it tries to use the same method names as sbt, e.g. `base` and `ext` to obtain base file name and extension.
 
-It is (C)opyright 2013&ndash;2017 by Hanns Holger Rutz. All rights reserved. FileUtil is released under the [GNU Lesser General Public License](https://raw.github.com/Sciss/FileUtil/main/LICENSE) v2.1+ and comes with absolutely no warranties. To contact the author, send an email to `contact at sciss.de`.
+It is (C)opyright 2013&ndash;2020 by Hanns Holger Rutz. All rights reserved. FileUtil is released under the [GNU Lesser General Public License](https://raw.github.com/Sciss/FileUtil/main/LICENSE) v2.1+ and comes with absolutely no warranties. To contact the author, send an email to `contact at sciss.de`.
 
 ## requirements / installation
 
-This project compiles against Scala 2.12, 2.11, 2.10 using sbt 0.13.
+This project compiles against Scala 2.13, 2.12 using sbt. The last version to support Scala 2.11 was 1.1.3.
 
 To use the library in your project:
 
     "de.sciss" %% "fileutil" % v
 
-The current version `v` is `"1.1.3"`
+The current version `v` is `"1.1.4"`
 
 ## contributing
 
@@ -47,5 +47,4 @@ The regular Java methods on files are still available, such as `.lastModified`, 
 
 ### API docs
 
-The API docs can be generated via `sbt doc`. The latest docs [can be browsed online here](http://sciss.github.io/FileUtil/latest/api/de/sciss/file/index.html).
-I publish them via `sbt ghpages-push-site`.
+The API docs can be generated via `sbt doc`.
