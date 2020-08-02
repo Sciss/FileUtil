@@ -1,14 +1,14 @@
 lazy val baseName       = "FileUtil"
 lazy val baseNameL      = baseName.toLowerCase
-lazy val projectVersion = "1.1.4"
+lazy val projectVersion = "1.1.5-SNAPSHOT"
 lazy val mimaVersion    = "1.1.2"
 
 lazy val commonSettings = Seq(
   name               := baseName,
   version            := projectVersion,
   organization       := "de.sciss",
-  scalaVersion       := "2.13.2",
-  crossScalaVersions := Seq("2.13.2", "2.12.11"),
+  scalaVersion       := "2.13.3",
+  crossScalaVersions := Seq("0.24.0-RC1", "2.13.3", "2.12.11"),
   description        := "Simple Scala enrichtments for java.io.File",
   homepage           := Some(url(s"https://git.iem.at/sciss/${name.value}")),
   licenses           := Seq("LGPL v2.1+" -> url("http://www.gnu.org/licenses/lgpl-2.1.txt")),

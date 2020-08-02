@@ -2,7 +2,7 @@
  *  File.scala
  *  (FileUtil)
  *
- *  Copyright (c) 2013-2017 Hanns Holger Rutz. All rights reserved.
+ *  Copyright (c) 2013-2020 Hanns Holger Rutz. All rights reserved.
  *
  *  This software is published under the GNU Lesser General Public License v2.1+
  *
@@ -70,7 +70,7 @@ object File {
   def tempDir: File = file(sys.props("java.io.tmpdir"))
 
   /** The separator character of the platform, used to separate sub directories of a file. */
- 	val sep    : Char = java.io.File.separatorChar
+  val sep    : Char = java.io.File.separatorChar
 
   /** The character of the platform usable to separate entire paths. */
   val pathSep: Char = java.io.File.pathSeparatorChar
@@ -99,7 +99,7 @@ object File {
       if (d1 && d2) {
         // Enter numerical comparison
         var c3, c4 = ' '
-        do {
+        while ({
           i += 1
           c3 = if (i < n1) s1.charAt(i) else 'x'
           c4 = if (i < n2) s2.charAt(i) else 'x'
@@ -109,8 +109,9 @@ object File {
           }
           d1 = Character.isDigit(c3)
           d2 = Character.isDigit(c4)
-        }
-        while (d1 && d2)
+
+          d1 && d2
+        }) ()
 
         if (d1 != d2) return if (d1) 1 else -1
         if (c1 != c2) return c1 - c2

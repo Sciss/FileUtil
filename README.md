@@ -17,7 +17,7 @@ To use the library in your project:
 
     "de.sciss" %% "fileutil" % v
 
-The current version `v` is `"1.1.4"`
+The current version `v` is `"1.1.5"`
 
 ## contributing
 
