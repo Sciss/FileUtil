@@ -1,6 +1,6 @@
 lazy val baseName       = "FileUtil"
 lazy val baseNameL      = baseName.toLowerCase
-lazy val projectVersion = "1.1.5-SNAPSHOT"
+lazy val projectVersion = "1.1.5"
 lazy val mimaVersion    = "1.1.2"
 
 lazy val commonSettings = Seq(
@@ -15,6 +15,9 @@ lazy val commonSettings = Seq(
   initialCommands in console := """import de.sciss.file._""",
   scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-Xsource:2.13", "-Xlint"),
   mimaPreviousArtifacts := Set("de.sciss" %% baseNameL % mimaVersion),
+  sources in (Compile, doc) := {
+    if (isDotty.value) Nil else (sources in (Compile, doc)).value  // https://github.com/lampepfl/dotty/issues/8634 
+  },
 )
 
 lazy val root = project.in(file("."))
