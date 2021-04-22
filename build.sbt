@@ -4,15 +4,16 @@ lazy val projectVersion = "1.1.5"
 lazy val mimaVersion    = "1.1.2"
 
 // sonatype plugin requires that these are in global
-ThisBuild / version      := projectVersion
-ThisBuild / organization := "de.sciss"
+ThisBuild / version       := projectVersion
+ThisBuild / organization  := "de.sciss"
+ThisBuild / versionScheme := Some("pvp")
 
 lazy val commonSettings = Seq(
   name               := baseName,
 //  version            := projectVersion,
 //  organization       := "de.sciss",
-  scalaVersion       := "2.13.4",
-  crossScalaVersions := Seq("3.0.0-RC1", "2.13.4", "2.12.13"),
+  scalaVersion       := "2.13.5",
+  crossScalaVersions := Seq("3.0.0-RC3", "2.13.5", "2.12.13"),
   description        := "Simple Scala enrichtments for java.io.File",
   homepage           := Some(url(s"https://git.iem.at/sciss/${name.value}")),
   licenses           := Seq("LGPL v2.1+" -> url("http://www.gnu.org/licenses/lgpl-2.1.txt")),
