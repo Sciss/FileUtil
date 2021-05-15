@@ -13,16 +13,16 @@ lazy val commonSettings = Seq(
 //  version            := projectVersion,
 //  organization       := "de.sciss",
   scalaVersion       := "2.13.5",
-  crossScalaVersions := Seq("3.0.0-RC3", "2.13.5", "2.12.13"),
+  crossScalaVersions := Seq("3.0.0", "2.13.5", "2.12.13"),
   description        := "Simple Scala enrichtments for java.io.File",
   homepage           := Some(url(s"https://git.iem.at/sciss/${name.value}")),
   licenses           := Seq("LGPL v2.1+" -> url("http://www.gnu.org/licenses/lgpl-2.1.txt")),
   initialCommands in console := """import de.sciss.file._""",
   scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature", "-Xsource:2.13", "-Xlint"),
   mimaPreviousArtifacts := Set("de.sciss" %% baseNameL % mimaVersion),
-  sources in (Compile, doc) := {
-    if (isDotty.value) Nil else (sources in (Compile, doc)).value  // https://github.com/lampepfl/dotty/issues/8634 
-  },
+  // sources in (Compile, doc) := {
+  //   if (isDotty.value) Nil else (sources in (Compile, doc)).value  // https://github.com/lampepfl/dotty/issues/8634 
+  // },
 )
 
 lazy val root = project.in(file("."))
